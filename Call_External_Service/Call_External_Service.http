@@ -1,0 +1,5 @@
+@Call_External_Service_HostAddress = https://localhost:7216
+
+GET {{Call_External_Service_HostAddress}}/api/classup/Courses
+
+###

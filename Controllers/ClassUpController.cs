@@ -9,10 +9,18 @@ namespace Call_External_Service.Controllers
     public class ClassUpController(IClassUpClient classUpClient) : ControllerBase
     {
         [HttpGet("Courses")]
-        public async Task<IActionResult> GetCources()
+        public async Task<IActionResult> GetCourses()
         {
-            var courses = await classUpClient.GetCources();
+            var courses = await classUpClient.GetCourses();
             return Ok(courses);
+
+        }
+
+        [HttpGet("Course/{id}")]
+        public async Task<IActionResult> GetCourseById([FromRoute]int id)
+        {
+            var course = await classUpClient.GetCourseById(id);
+            return Ok(course);
 
         }
     }

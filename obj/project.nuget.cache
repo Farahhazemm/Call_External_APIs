@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "M7tG+CED9HU=",
+  "success": true,
+  "projectFilePath": "E:\\APISecuritySummary\\APISecutrity\\Call_External_Service\\Call_External_Service\\Call_External_Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ELSafwa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "C:\\Users\\ELSafwa\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\ELSafwa\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\ELSafwa\\.nuget\\packages\\refit\\10.0.1\\refit.10.0.1.nupkg.sha512",
+    "C:\\Users\\ELSafwa\\.nuget\\packages\\refit.httpclientfactory\\10.0.1\\refit.httpclientfactory.10.0.1.nupkg.sha512",
+    "C:\\Users\\ELSafwa\\.nuget\\packages\\refit.newtonsoft.json\\10.0.1\\refit.newtonsoft.json.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

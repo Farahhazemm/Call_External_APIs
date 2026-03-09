@@ -1,4 +1,5 @@
 using Call_External_Service.Clients.ClassUp;
+using Refit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,12 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<IClassUpClient, ClassUpClient>();
-builder.Services.AddHttpClient("ClassUp", client =>
-{
-    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ClassUp:BaseUrl")!);
-    client.DefaultRequestHeaders.Add("Accept", "application/json");
-    });
+//builder.Services.AddScoped<IClassUpClient, ClassUpClient>();
+//builder.Services.AddHttpClient("ClassUp", client =>
+//{
+//    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ClassUp:BaseUrl")!);
+//    client.DefaultRequestHeaders.Add("Accept", "application/json");
+//    });
+
+builder.Services.AddRefitClient<IClassUpClient>()
+    .ConfigureHttpClient(c => c.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ClassUp:BaseUrl")!));
 
 var app = builder.Build();
 

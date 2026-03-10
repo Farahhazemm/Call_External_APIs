@@ -1,4 +1,5 @@
 ﻿using Call_External_Service.Clients.ClassUp;
+using Call_External_Service.Clients.ClassUp.Contract;
 using Call_External_Service.Clients.ClassUp.Contract.Filter;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,14 @@ namespace Call_External_Service.Controllers
         {
             var Categorises = await classUpClient.GetCategorise(filter);
             return Ok(Categorises);
+
+        }
+
+        [HttpPost("Account-login")]
+        public async Task<IActionResult> GetToken([FromBody] LoginDTO dTO)
+        {
+            var Token = await classUpClient.Login(dTO);
+            return Ok(Token);
 
         }
     }

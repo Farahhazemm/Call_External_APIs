@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Call_External_Service.Controllers.ClassUpController",
+    "Method": "GetToken",
+    "RelativePath": "api/ClassUp/Account-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dTO",
+        "Type": "Call_External_Service.Clients.ClassUp.Contract.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Call_External_Service.Controllers.ClassUpController",
     "Method": "GetCategorises",
     "RelativePath": "api/ClassUp/Categorises",
     "HttpMethod": "GET",

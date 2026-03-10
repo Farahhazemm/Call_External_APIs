@@ -13,5 +13,8 @@ namespace Call_External_Service.Clients.ClassUp
 
         [Get("/api/Categorise")]
         Task<object> GetCategorise([Query] FilterOptions filter);
+
+        [Post("/api/Account/login")]
+        Task<object>  Login([Body] LoginDTO loginDTO);
     }
 }

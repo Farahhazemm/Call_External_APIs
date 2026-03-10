@@ -4,7 +4,7 @@
     {
         #region Filtering
         public string? FilterBy { get; set; }
-        public string? FilterValue { get; set; }
+        public string? FilterValue { get; set; } 
         #endregion
 
         #region Sorting

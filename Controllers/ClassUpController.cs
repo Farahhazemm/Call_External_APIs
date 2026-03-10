@@ -1,4 +1,5 @@
 ﻿using Call_External_Service.Clients.ClassUp;
+using Call_External_Service.Clients.ClassUp.Contract.Filter;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,14 @@ namespace Call_External_Service.Controllers
         {
             var course = await classUpClient.GetCourseById(id);
             return Ok(course);
+
+        }
+
+        [HttpGet("Categorises")]
+        public async Task<IActionResult> GetCategorises([FromQuery] FilterOptions filter)
+        {
+            var Categorises = await classUpClient.GetCategorise(filter);
+            return Ok(Categorises);
 
         }
     }

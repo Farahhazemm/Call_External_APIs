@@ -1,6 +1,47 @@
 [
   {
     "ContainingType": "Call_External_Service.Controllers.ClassUpController",
+    "Method": "GetCategorises",
+    "RelativePath": "api/ClassUp/Categorises",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "FilterBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FilterValue",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortOrder",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Call_External_Service.Controllers.ClassUpController",
     "Method": "GetCourseById",
     "RelativePath": "api/ClassUp/Course/{id}",
     "HttpMethod": "GET",
